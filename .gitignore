@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual env
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+
+# Logs
+*.log
+
+# Node
+node_modules/
+dist/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Cache
+.cache/
