@@ -5,7 +5,17 @@ from recommender import MovieRecommender
 import os
 
 app = Flask(__name__)
-CORS(app)
+
+FRONTEND_URL = os.getenv("FRONTEND_URL")
+
+CORS(app, resources={
+    r"/*": {
+        "origins": [
+            "http://localhost:5173",
+            FRONTEND_URL
+        ]
+    }
+})
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
