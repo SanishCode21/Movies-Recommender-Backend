@@ -2,6 +2,8 @@ import pickle
 import difflib
 import requests
 import os
+from dotenv import load_dotenv
+load_dotenv()
 from sklearn.metrics.pairwise import cosine_similarity
 
 TMDB_API_KEY = os.getenv("TMDB_API_KEY")
@@ -28,14 +30,10 @@ class MovieRecommender:
         return matches[0] if matches else None
 
     def fetch_poster(self, movie_id):
-        url = f"https://api.themoviedb.org/3/movie/{movie_id}"
-        params = {
-            "api_key": TMDB_API_KEY,
-            "language": "en-US"
-        }
+        url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={TMDB_API_KEY}&language=en-US"
 
         try:
-            res = requests.get(url, params=params)
+            res = requests.get(url)
 
             if res.status_code != 200:
                 print("TMDB error:", res.status_code, res.text)
@@ -85,6 +83,5 @@ class MovieRecommender:
             "input_movie": self.movies.iloc[idx]["title"],
             "results": results
         }
-
 
 
