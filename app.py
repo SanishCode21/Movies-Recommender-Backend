@@ -12,6 +12,7 @@ CORS(app, resources={
     r"/*": {
         "origins": [
             "http://localhost:5173",
+            "https://ek-movie-dekho.vercel.app",
             FRONTEND_URL
         ]
     }

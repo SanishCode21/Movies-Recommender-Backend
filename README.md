@@ -42,6 +42,13 @@ movie-recommender-backend/
 └── README.md
 ```
 
+## 🔗 Live Demo
+
+- Frontend: https://ek-movie-dekho.vercel.app  
+- Backend API: https://movies-recommender-backend-zog1.onrender.com  
+
+---
+
 ## API Endpoints
 
 ```
@@ -153,6 +160,7 @@ http://localhost:5000
 - Email: ***sanishbux42@gmail.com***
 - Linkedin: https://www.linkedin.com/in/sanish-kumar-singh-163679289
 - Kaggle Notebook: https://www.kaggle.com/code/sanishkumarsingh/content-based-movies-recommender-system
+- Movies Recommender project demo: "https://ek-movie-dekho.vercel.app"
 
 
 ### ⭐ Support
